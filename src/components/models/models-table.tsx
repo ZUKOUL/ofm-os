@@ -12,7 +12,7 @@ import {
   type SortingState,
   useReactTable,
 } from '@tanstack/react-table';
-import { AlertTriangle, ArrowUpDown, Eye, Plus } from 'lucide-react';
+import { AlertTriangle, SwitchVertical01, Eye, Plus } from '@untitledui/icons';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -69,7 +69,7 @@ const columns: ColumnDef<Model>[] = [
         onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
       >
         Name
-        <ArrowUpDown className="ml-1 h-3 w-3" />
+        <SwitchVertical01 className="ml-1 h-3 w-3" />
       </Button>
     ),
     cell: ({ row }) => (
@@ -124,7 +124,7 @@ const columns: ColumnDef<Model>[] = [
         onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
       >
         Followers
-        <ArrowUpDown className="ml-1 h-3 w-3" />
+        <SwitchVertical01 className="ml-1 h-3 w-3" />
       </Button>
     ),
     cell: ({ getValue }) => {
@@ -143,7 +143,7 @@ const columns: ColumnDef<Model>[] = [
         onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
       >
         Added
-        <ArrowUpDown className="ml-1 h-3 w-3" />
+        <SwitchVertical01 className="ml-1 h-3 w-3" />
       </Button>
     ),
     cell: ({ getValue }) =>

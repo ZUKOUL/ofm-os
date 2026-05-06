@@ -4,19 +4,20 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 
 import {
-  BarChart3,
-  BookOpen,
+  BarChart01,
+  BookOpen01,
   Eye,
-  Film,
-  FolderOpen,
-  LayoutDashboard,
-  LogOut,
-  MessageSquare,
-  Settings,
-  Sparkles,
-  Users,
-  Video,
-} from 'lucide-react';
+  Film02,
+  Folder,
+  Home01,
+  LogOut01,
+  MagicWand02,
+  MessageChatCircle,
+  Settings01,
+  Target04,
+  Users01,
+  VideoRecorder,
+} from '@untitledui/icons';
 
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -24,20 +25,20 @@ import { cn } from '@/lib/utils';
 import { createClient } from '@/lib/supabase/client';
 
 const navItems = [
-  { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+  { label: 'Dashboard', href: '/dashboard', icon: Home01 },
   { separator: true, label: 'Sourcing' },
-  { label: 'Models', href: '/models', icon: Users },
-  { label: 'Templates', href: '/templates', icon: MessageSquare },
-  { label: 'Questionnaires', href: '/questionnaires', icon: BookOpen },
+  { label: 'Models', href: '/models', icon: Users01 },
+  { label: 'Templates', href: '/templates', icon: MessageChatCircle },
+  { label: 'Questionnaires', href: '/questionnaires', icon: BookOpen01 },
   { separator: true, label: 'Knowledge Base' },
-  { label: 'Niches', href: '/niches', icon: FolderOpen },
-  { label: 'Différenciants', href: '/differenciants', icon: Sparkles },
+  { label: 'Niches', href: '/niches', icon: Target04 },
+  { label: 'Différenciants', href: '/differenciants', icon: MagicWand02 },
   { label: 'Competitors', href: '/competitors', icon: Eye },
   { separator: true, label: 'Production' },
-  { label: 'Content', href: '/content', icon: Film },
-  { label: 'Video Tools', href: '/video-tools', icon: Video },
+  { label: 'Content', href: '/content', icon: Film02 },
+  { label: 'Video Tools', href: '/video-tools', icon: VideoRecorder },
   { separator: true, label: 'Analytics' },
-  { label: 'Analytics', href: '/analytics', icon: BarChart3 },
+  { label: 'Analytics', href: '/analytics', icon: BarChart01 },
 ] as const;
 
 export function Sidebar() {
@@ -99,7 +100,7 @@ export function Sidebar() {
               : 'text-muted-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
           )}
         >
-          <Settings className="h-4 w-4" />
+          <Settings01 className="h-4 w-4" />
           Settings
         </Link>
         <Button
@@ -108,7 +109,7 @@ export function Sidebar() {
           className="mt-1 w-full justify-start gap-3 text-muted-foreground hover:text-foreground"
           onClick={handleLogout}
         >
-          <LogOut className="h-4 w-4" />
+          <LogOut01 className="h-4 w-4" />
           Logout
         </Button>
       </div>
